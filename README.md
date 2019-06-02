@@ -5,7 +5,7 @@ Inspired from below project by Adrian Rosebrock
 
 https://www.pyimagesearch.com/2017/02/13/recognizing-digits-with-opencv-and-python/
 
-Using SVM model to replace the original handicrafted recognition process
+Using SVM model with 20 training images to replace the original handicrafted recognition process
 
 result of svm_model.py:
 
