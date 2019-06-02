@@ -15,7 +15,7 @@ img = cv2.morphologyEx(threshold, cv2.MORPH_OPEN, kernel)
 
 cnts = cv2.findContours(img.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
 cnts = imutils.grab_contours(cnts)
-cv2.drawContours(image,cnts,-1,(0, 255, 0), 2)
+#cv2.drawContours(image,cnts,-1,(0, 255, 0), 2)
 boundingRect = []
 for c in cnts:
     (x, y, w, h) = cv2.boundingRect(c)
@@ -56,9 +56,10 @@ print(test_data.shape)
 #load model
 model2 = cv2.ml.SVM_load("model.xml")
 _, y_val = model2.predict(test_data)
+print("prediction result")
 print(np.int_(y_val))
 
 
-cv2.imshow("Image", image)   
-cv2.waitKey(0)  
-cv2.destroyAllWindows()
+#cv2.imshow("Image", image)   
+#cv2.waitKey(0)  
+#cv2.destroyAllWindows()
